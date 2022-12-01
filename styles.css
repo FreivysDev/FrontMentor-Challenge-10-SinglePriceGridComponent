@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+:root {
+  --Cyan: hsl(179, 62%, 43%);
+  --BrightYellow: hsl(71, 73%, 54%);
+  --LightGray: hsl(204, 43%, 93%);
+  --GrayishBlue: hsl(218, 22%, 67%);
+  --White: #ffff;
+  --font: 'Karla', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  background-color: var(--LightGray);
+  color: var(--White);
+  font-family: var(--font);
+  font-size: 100%;
+  height: 100vh;
+}
+
+.wrapper {
+  background-color: var(--White);
+  border-radius: .375rem;
+  height: 45.125rem;
+  width: 19.375rem;
+  margin: 4.5rem auto 2.8125rem;
+  overflow: hidden;
+}
+
+/* Community */
+.community {
+  height: 16.6875rem;
+  padding: 1.5625rem 1.5625rem 0;
+}
+
+.community__title {
+  color: var(--Cyan);
+  font-size: 1.25rem;
+  margin-bottom: 1.5625rem;
+}
+
+.community__caption {
+  color: var(--BrightYellow);
+  font-size: 1rem;
+  margin-bottom: 1.5625rem;
+}
+
+.community__paragraph {
+  color: var(--GrayishBlue);
+  font-size: .8125rem;
+  line-height: 2;
+}
+
+/* Subscription */
+.subscription {
+  background-color: var(--Cyan);
+  height: 14.25rem;
+  /* width: 100%; */
+  padding: 1.25rem 1.5625rem 0;
+}
+
+.subscription__title {
+  font-size: 1.125rem;
+  margin-bottom: 1.125rem;
+}
+
+.subscription__price {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: .625rem;
+}
+
+.subscription__cost {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.subscription__time {
+  color: var(--LightGray);
+  opacity: .5;
+}
+
+.subscription__paragraph {
+  margin: .5rem 0 1.875rem;
+}
+
+.subscription__btn {
+  background-color: var(--BrightYellow);
+  border-radius: .3125rem;
+  border-style: none;
+  color: var(--White);
+  cursor: pointer;
+  font-size: .875rem;
+  font-weight: 700;
+  height: 3rem;
+  width: 16.4375rem;
+  text-decoration: none;
+  transition: background-color .6s ease;
+}
+
+.subscription__btn:hover {
+  background-color: var(--White);
+  color: var(--Cyan);
+}
+
+/* Why Us */
+.links {
+  background-color: var(--Cyan);
+  opacity: .8;
+  height: 14.25rem;
+  width: 100%;
+  padding: 1.25rem 1.5625rem 0;
+}
+
+.links__title {
+  font-size: 1.125rem;
+}
+
+.links__items {
+  margin-top: .9375rem;
+}
+
+.links__item {
+  cursor: pointer;
+  font-size: .875rem;
+  line-height: 1.5;
+  list-style: none;
+  opacity: .7;
+  transition: color .6s ease;
+}
+
+.links__item:hover {
+  color: var(--BrightYellow);
+  font-weight: 700;
+}
+
+
+.footer {
+  color: var(--Cyan);
+  font-size: .6875rem;
+  text-align: center;
+}
+
+.footer a {
+  color: hsl(228, 45%, 44%);
+  transition: color .5s ease;
+}
+
+.footer a:hover {
+  color: var(--GrayishBlue);
+}
+
+/* Media Querie Desktop */
+@media screen and (min-width: 42.5rem) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "community community"
+      "subscription links";
+    height: 29.75rem;
+    width: 39.75rem;
+    margin: 10.1875rem auto 6.25rem;
+  }
+
+  .community {
+    grid-area: community;
+    height: 13.625rem;
+    width: 100%;
+    padding: 1.5625rem 2.5rem 0;
+  }
+
+  .community__title {
+    font-size: 1.5rem;
+  }
+
+  .community__caption {
+    font-size: 1.125rem;
+  }
+
+  .community__paragraph {
+    font-size: 1rem;
+  }
+
+  .subscription {
+    grid-area: subscription;
+    height: 100%;
+  }
+
+  .links {
+    grid-area: links;
+    height: 100%;
+  }
+}
